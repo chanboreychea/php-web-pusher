@@ -1,6 +1,6 @@
 <?php
 
-require '../vendor/autoload.php';
+require __DIR__ . '../../vendor/autoload.php';
 
 // // Define path to cacert.pem
 // $cacertPath = 'C:/wamp64/bin/php/php8.2.13/extras/ssl/cacert.pem'; // Make sure the path is correct
@@ -13,9 +13,9 @@ require '../vendor/autoload.php';
 $options = array(
     'cluster' => 'ap1',
     'useTLS' => true,
-    'curl_options' => [
-        CURLOPT_CAINFO => $cacertPath,
-    ],
+    // 'curl_options' => [
+    //     CURLOPT_CAINFO => $cacertPath,
+    // ],
 );
 
 $pusher = new Pusher\Pusher(
