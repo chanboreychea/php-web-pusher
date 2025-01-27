@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '../../vendor/autoload.php';
+require '../vendor/autoload.php';
 
 // // Define path to cacert.pem
 // $cacertPath = 'C:/wamp64/bin/php/php8.2.13/extras/ssl/cacert.pem'; // Make sure the path is correct
