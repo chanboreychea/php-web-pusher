@@ -18,8 +18,7 @@
       if ("Notification" in window) {
         // Request permission
         Notification.requestPermission().then(function (permission) {
-          
-          //if (permission === "granted") {
+          if (permission === "granted") {
             // Create a custom notification with title, body, and icon
             let notificationOptions = {
               body: data.message, // Replace with your message
@@ -40,9 +39,9 @@
             notification.onclick = function () {
               window.open("https://brms.iauoffsa.us"); // Redirect when the user clicks the notification
             };
-          //} else {
-            //console.log("Notification permission denied.");
-          //}
+          } else {
+            console.log("Notification permission denied.");
+          }
         });
       } else {
         console.log("Notifications are not supported by this browser.");
